@@ -5,42 +5,36 @@ using namespace std;
 
 int main(){
 
-    double box, sideL, prem, genAd;
+    int box{}, sideL{}, prem{}, genAd{};
 
     
-    cout << "Enter tickets sold on Box: ";
+    cout << "Enter ticket(box): ";
     cin >> box;
 
-    cout << "Enter tickets sold on sideline: ";
+    cout << "Enter ticket(sideL): ";
     cin >> sideL;
 
-    cout <<"Enter tickets sold on premium: " ;
+    cout << "Enter ticket(prem): ";
     cin >> prem;
 
-    cout << "Enter tickets sold on general admission: ";
+    cout << "Enter ticket(genAd): ";
     cin >> genAd;
 
-    cout << "250\t" << box << endl; 
-    cout <<  "100\t" << sideL << endl;
-    cout <<  "50\t" << prem << endl;
-    cout <<  "25\t" << genAd << endl;
 
-    double allTickets = box + sideL + prem + genAd;
+    cout << "\n\t\t\tTicket Price \t\t\tNumber of Ticket Sold\n";
+    cout << "Box: \t\t\t" << 250 << "\t\t\t\t" << box << '\n';
+    cout << "Side line: \t\t" << 100 << "\t\t\t\t" << sideL << '\n';
+    cout << "Premium: \t\t" << 50 << "\t\t\t\t" << prem << '\n';
+    cout << "General Admission: \t" << 25 << "\t\t\t\t" << genAd << '\n';
 
-    cout << "Total tickets sold: " << allTickets << endl;
+    box *= 250;
+    sideL *= 100;
+    prem *= 50;
+    genAd *= 25;
 
+    float total = box + sideL + prem + genAd;
 
-   
-    double boxSales = box * 250;
-    double sideLSales = sideL * 100;
-    double premSales = prem * 50;
-    double genAdSales = genAd * 25;
-
-    double totalSales = boxSales + sideLSales + premSales + genAdSales;
-
-
-    cout << "Total Sales: " << fixed << setprecision(2) << totalSales << endl;
-
+    cout << "Total sale amount: " << fixed << setprecision(2) << total;
 
     return 0;
 }
